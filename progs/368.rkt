@@ -1,0 +1,15 @@
+#lang racket
+(begin
+  (define (append . xs)    
+    (if (empty? xs)
+        '()
+        (if (empty? (cdr xs))
+            (car xs)
+            (if (empty? (car xs))
+                (apply append (cdr xs))
+                (cons (car (car xs))
+                      (apply append (cons (cdr (car xs)) (cdr xs))))))))
+  (define (list . xs) xs)                                
+  (append '()
+          (append (list 1 2 3) (list 4 5) (list 6 7 8))
+          (append (list 9))))

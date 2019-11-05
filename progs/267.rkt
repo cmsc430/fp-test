@@ -1,0 +1,2 @@
+#lang racket
+(boolean? #t)

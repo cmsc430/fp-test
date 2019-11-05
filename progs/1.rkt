@@ -1,0 +1,16 @@
+#lang racket
+(cond
+ (#\ᣄ #t)
+ (#t #\U000F0F55)
+ (6 #t)
+ ((sub1 #\ꖖ) #f)
+ (#t (cond (#t #t) (#f (zero? #t)) (else #t)))
+ (#t #\뫟)
+ (-1 #t)
+ ((if (abs (integer->char #t)) (sub1 #f) (cond (else #f))) #f)
+ (1 0)
+ (#t (zero? #f))
+ (#\U0007421A #f)
+ ((if (if #t #\앋 #\𫙟) (char? #t) #\U0001C606) #\U000E6C21)
+ (#\U0009A4DB (if #\ཐ (add1 (cond (else #f))) #t))
+ (else #f))

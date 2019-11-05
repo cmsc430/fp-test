@@ -1,0 +1,87 @@
+#lang racket
+(cond
+ ((boolean? (if -1 #\Ⅿ #t)) -32)
+ (#f #\忈)
+ ((abs
+   (cond
+    ((let ((x2 #\U0009014F)) x2) #t)
+    ((cond
+      ((if (cond
+            (13 (if (cond (else 35)) #t (if #t 2 1)))
+            ((cond (#\U00072F4B #f) (-16 (cond (2 #\Ⳡ) (else #f))) (else #t))
+             (cond (else #t)))
+            ((if 2 (if #f #\뙑 #f) (cond (#t #\U000ED662) (-1 #t) (else -3)))
+             #t)
+            (else #t))
+         (if #f #f (if #\𡃸 (cond (else #t)) (cond (else #f))))
+         #t)
+       -2)
+      ((if (if #\⼔ (char->integer #f) (cond (8 #\U00081175) (else #t)))
+         (-
+          (cond
+           (-2 #f)
+           (#t #t)
+           (-4 0)
+           (#t (cond (#\춚 #\䠧) (#f #\륑) (#\韽 #f) (else 8)))
+           (2 (cond (#t #t) (#t #\峇) (else #\✱)))
+           (else #f)))
+         -2)
+       8)
+      (else #t))
+     #\吳)
+    ((cond (else #\䏖)) (let ((u2 #t)) u2))
+    ((cond (#f #t) (#\U000CBD12 #t) (else 2)) #f)
+    ((if #t #\矛 #\䉞) #f)
+    ((cond (else #\뇾)) #f)
+    (#\U000365EA
+     (cond
+      (#t #f)
+      (#t -16)
+      (#\귆 #f)
+      (#t (cond ((sub1 #f) #f) (#\U0006BB8A #t) (else #t)))
+      (#\U0006A788 #f)
+      (-17 #t)
+      (2 #\⪿)
+      (#\U0005C3C3 #\泾)
+      (else -2)))
+    ((char->integer #f) #\쇽)
+    (#f #t)
+    (#t
+     (cond
+      ((if #\몿 (integer? 1) (boolean? (sub1 (- #\滶)))) #f)
+      (#f 7)
+      (#t #\墨)
+      (#f #\u1A9E)
+      (else #\㚫)))
+    (#\₂ #t)
+    (else #f)))
+  (if #\U00046C29 (let ((c1 -8)) #f) -1))
+ (-2 (let ((e2 #\U0009A526)) #t))
+ ((let ((m2 #t)) m2) #f)
+ ((sub1 -3) #t)
+ (#t (cond (else 2)))
+ ((cond
+   (1 (char? 2))
+   ((cond
+     ((add1 #\U001032B5) (char? (abs #\ꔦ)))
+     (2 (abs #f))
+     ((add1 -3) (add1 #f))
+     (else #f))
+    #f)
+   (#f #f)
+   (#f (sub1 #t))
+   (#f #f)
+   (4 #t)
+   (#\U0005CED9
+    (cond
+     ((boolean? #f) #\U000CE6D8)
+     ((if (cond (else #t)) #t (integer->char #t)) #f)
+     ((if #\稒 #t #\舶) (char? #f))
+     (else #\u086B)))
+   (#f #f)
+   (else -2))
+  (if (integer? 3)
+    (let ((o2 #\ᬔ)) (if o2 -1 #\U000546CA))
+    (cond ((boolean? 4) #\㢊) (else (let ((k0 #t)) #\㈪)))))
+ ((let ((c2 17)) #t) #t)
+ (else #t))

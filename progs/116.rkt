@@ -1,0 +1,117 @@
+#lang racket
+(if 6
+  (boolean? #\𪔇)
+  (boolean?
+   (cond
+    (0 (if #f #f (if #t #f -1)))
+    (#f #t)
+    (#f 2)
+    (#t #\U000B8DC1)
+    (#f (if #\U0010FC9C #t #f))
+    ((cond
+      (#\U0008B95F -1)
+      (#\⢷ #\씦)
+      (#t #t)
+      (#t -2)
+      (6
+       (cond
+        (#f 6)
+        (9
+         (if #f
+           #f
+           (integer? (cond (#t #f) (#t #\U0001604B) (#\쀟 0) (1 3) (else #f)))))
+        ((if #t (integer? #f) (- #t)) (boolean? #\ݚ))
+        (else
+         (cond
+          (-1 (if #f (char? #t) #\⃐))
+          (#\U0004A6C2 #f)
+          (else (add1 (cond (#\괿 #f) (else #f))))))))
+      (11 #t)
+      ((integer->char (if #t (if #\U0009B188 3 #t) #f))
+       (sub1 (cond (else #t))))
+      (#f 1024)
+      (-2 #f)
+      (else (if #\𤜺 #\⦙ #\璿)))
+     (cond
+      (0 #f)
+      (#f 3)
+      ((cond
+        (#f #\⸔)
+        ((if #f
+           (cond
+            ((if 1 #\u0560 #t) (cond (#t #f) (#t 256) (#\寭 #t) (else 2)))
+            (else #t))
+           #f)
+         (if -2 (if (abs #t) (add1 -3) (char? #t)) #f))
+        ((char? #\ꥀ) #t)
+        (#f #f)
+        ((if (if #t -11 #\U000BA3BC) -1 #f)
+         (cond
+          (#\͑ 0)
+          (#t #f)
+          (#f (if (cond (else 1)) #t (cond (#f #\ꈒ) (else #t))))
+          ((if 16 (char? #f) (if #f -1 #f)) #f)
+          ((zero? (zero? 1)) 4)
+          ((if #f #t 0)
+           (if (char->integer 4)
+             (boolean? #\獿)
+             (cond (#\U000AD5C2 #t) (#f -1) (else #\㲞))))
+          (#\⠸ #\U00077D3F)
+          ((if #\돯 -1 (cond (#t #t) (#\U0006FA24 #t) (else -8))) -2)
+          (#t #\岵)
+          (5 #\裛)
+          ((- (if #\U000F2F9F #\U000D4C77 #t)) -2)
+          (2 (if #t (if -2 #f #f) #f))
+          ((if (if #f #\U00069905 #f) #t #t)
+           (if #\뀁
+             (cond
+              (1 #t)
+              (#\눩 #f)
+              (#t #\ኝ)
+              (-9 #\얆)
+              (#t #f)
+              (#f #t)
+              (#f #t)
+              (#\콹 #f)
+              (#\U000C04C9 #f)
+              (#f #\♆)
+              (#f 9)
+              (#t #\U0002C9A5)
+              (#f #f)
+              (0 #t)
+              (#t #\촕)
+              (1 #\U000A7542)
+              (2 -2)
+              (#\㈌ #f)
+              (#\鼩 #f)
+              (#t -1)
+              (#t -1)
+              (-1 #f)
+              (5 #f)
+              (else #\uE64A))
+             -9))
+          (#t (if (zero? 36) #\鮛 #f))
+          (#f #\ꂲ)
+          (32
+           (cond
+            ((abs 2)
+             (cond
+              (#t #\U00063FB9)
+              (-2 #t)
+              (#f #t)
+              (-35 #\ᨷ)
+              (#f #t)
+              (#\U00094D65 #\U00108044)
+              (-2 2)
+              (else #t)))
+            ((if #f #\U000E24DC -1) -1)
+            ((- #t) #f)
+            (else (cond (else #t)))))
+          (else #t)))
+        (-5 (char? (char->integer -4)))
+        ((cond (else #f)) #t)
+        (else #f))
+       #t)
+      (else #f)))
+    ((cond (#t #f) (0 4) (#\◖ #t) (else 4)) #f)
+    (else (char->integer #t)))))

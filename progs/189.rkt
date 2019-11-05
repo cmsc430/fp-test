@@ -1,0 +1,60 @@
+#lang racket
+(abs
+ (cond
+  (2
+   (abs
+    (cond
+     (#t #\⚣)
+     (#f #t)
+     (#t #f)
+     (#\U0004D7B6 #f)
+     (#\舙 #\U000A9476)
+     (4 #f)
+     (#t #t)
+     (#t 9)
+     (2 #t)
+     (#t #t)
+     (#\U000672EA #f)
+     (#f #f)
+     (#f (abs (zero? 3)))
+     (#\◴ #f)
+     (else #\U00098E96))))
+  (#\U00038FB5 (integer->char (let ((n0 #f)) n0)))
+  (#f (if -5 -1 #f))
+  ((cond
+    ((if #\U000AEC65 4 #f)
+     (cond
+      (#f #\U00106C63)
+      (-1 #t)
+      (#t #t)
+      (#f -1)
+      (#t 0)
+      ((cond
+        (#t #\U000E9D37)
+        (else (cond ((char->integer #t) (if #f -5 #t)) (else #t))))
+       2)
+      (2 #f)
+      (#f #t)
+      (else -3)))
+    (#f (cond (else 2)))
+    (else 2))
+   (cond
+    ((abs #f) (boolean? 8))
+    ((cond (#f #t) (#t 0) (#f #t) (else -3)) #\U000D4D84)
+    ((char? #f) #\벧)
+    ((cond
+      (#f #t)
+      (#\쟧 #f)
+      (4 2)
+      (0 (add1 #\U0006E0CE))
+      (1 #t)
+      (#\U000AF218 #\𣾇)
+      (#f #f)
+      (else #\U00051768))
+     (let ((b1 2)) b1))
+    (3 #f)
+    (else (if #t #t 3))))
+  ((let ((g0 #\U001065A2)) #\U00089402) #f)
+  ((if #t -32 5) (let ((r0 #f)) (cond (2 2) (else #f))))
+  ((let ((c1 (if -2 #t #f))) (cond (5 c1) (else 0))) (sub1 (if #t #t #f)))
+  (else #\U000CD990)))

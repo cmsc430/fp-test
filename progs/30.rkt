@@ -1,0 +1,68 @@
+#lang racket
+(cond
+ ((if #t #f #\U000B16FB) #t)
+ (#f #\上)
+ (#t (integer->char #\U00102887))
+ ((- -2) 1)
+ (#\U0005F2E8 #f)
+ (else
+  (cond
+   ((if (cond (#t #\U000A804D) (else #\U000B7E79))
+      (let ((c1 #f)) #\䂭)
+      #\U00013845)
+    #f)
+   ((let ((n2 (sub1 #\U0005158D))) (if #t n2 #t)) #t)
+   ((integer? 6)
+    (if (if #f
+          (cond
+           (#\U000BB63A -2)
+           (1 (if #\㋆ (if #f #t #\襱) #f))
+           ((cond
+             ((if (sub1 #f) (sub1 #\䩸) (add1 #t)) -2)
+             ((cond (1 #f) (-9 (integer->char 8)) (else 7)) #\溺)
+             ((if #f
+                #f
+                (cond
+                 (#t #\U00100E37)
+                 (#t #\㰖)
+                 (#\U000EFAD9 5)
+                 (#t #\秺)
+                 (#t #\啴)
+                 (#t 1)
+                 (#\U0007D02E -5)
+                 (#\U000D9C2D #f)
+                 (1 3)
+                 (4 #\蚄)
+                 (#t #t)
+                 (#f 0)
+                 (#f 2)
+                 (#f #f)
+                 (#t #t)
+                 (else #f)))
+              #f)
+             ((if #t 0 #t)
+              (cond
+               (#f (- #\꯴))
+               ((char->integer #f) #f)
+               ((if #t #f #f) 3)
+               ((if #f 8 #\產) (zero? #\U00035BA8))
+               (else 9)))
+             (#f #\࡙)
+             (1 4)
+             (#\铰 #f)
+             (#f (if #t (if #\U000E1255 -1 #\U000643EF) #f))
+             (#\U0010E473 3)
+             ((integer->char (sub1 #t)) (cond (else (boolean? -3))))
+             (#\U000933BC #t)
+             (else #t))
+            (if #f (if #\U000B6052 -3 0) (char->integer #\ᮡ)))
+           (#t #t)
+           ((add1 #t) #\U0006AC10)
+           (else #f))
+          #f)
+      #\U0003539D
+      #t))
+   (3 #t)
+   (#t #t)
+   (#f (let ((z2 (integer? #\弬))) 1))
+   (else -5))))
