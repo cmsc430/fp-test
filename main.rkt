@@ -1,5 +1,12 @@
 #lang racket
 (require rackunit)
+(require racket/sandbox)
+
+(define eval
+  (let ((ev (make-evaluator 'racket)))
+    (lambda (x)
+      (with-handlers ([exn:fail? (lambda (_) 'err)])
+        (ev x)))))
 
 (define (read-prog p)
   (regexp-match "^#lang racket" p)
@@ -158,7 +165,7 @@
                              (cons (add1 (car xs))
                                    (map-add1 (cdr xs)))))
                        (map-add1 (cons 1 (cons 2 (cons 3 '()))))))
-               '(2 3 4))
+               ''(2 3 4))
 
 (check-equal? (run
                '(begin
@@ -170,20 +177,5 @@
                         (cons (string-ref str i)
                               (explode/i str (add1 i)))))
                   (explode "fred")))
-              '(#\f #\r #\e #\d))
+              ''(#\f #\r #\e #\d))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Random tests
-
-(define parses
-  (parameterize ((current-directory "progs"))
-    (for/list ([fn (directory-list)])
-      (list fn (call-with-input-file fn read-prog)))))
-
-(for ([p parses])
-  (match p
-    [(list fn p)
-     (check-equal? (with-handlers ([exn:fail? identity])
-                     (asm-interp (compile p)))
-                   (eval p)
-                   (list fn p))]))
