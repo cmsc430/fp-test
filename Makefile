@@ -10,5 +10,7 @@ compile: $(execs)
 %.test: %.run
 	@echo "$(shell $<)" = "$(shell racket $*.rkt)"
 
+test:
+
 clean:
 	-rm progs/*run
