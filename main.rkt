@@ -1,6 +1,5 @@
 #lang racket
-(require "interp.rkt"
-         rackunit)
+(require rackunit)
 
 (define (read-prog p)
   (regexp-match "^#lang racket" p)
@@ -8,7 +7,7 @@
 
 ;; Code for submission needs to be in ".." directory
 (require (only-in "../compile.rkt" compile)
-         (only-in "../asm/interp.rkt" asm-interp)
+         (only-in "../asm/interp.rkt" asm-interp asm-interp/io)
          (only-in "../syntax.rkt" prog? expr? closed?))
 
 
@@ -125,7 +124,7 @@
 
 (check-equal?
  (run '(let ((x 1)) x))
- (interp '(let ((x 1)) x)))
+ (eval '(let ((x 1)) x)))
 
 (check-equal? (run
                '(begin (define (f x) x)
@@ -173,8 +172,6 @@
                   (explode "fred")))
               '(#\f #\r #\e #\d))
 
-(check-equal? (run '(eq? "a" "a")) #f)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Random tests
 
@@ -186,14 +183,7 @@
 (for ([p parses])
   (match p
     [(list fn p)
-     (check-true (and (prog? p)
-                      (closed? p))
-                 (list fn p))]))
-
-(for ([p parses])
-  (match p
-    [(list fn p)
      (check-equal? (with-handlers ([exn:fail? identity])
                      (asm-interp (compile p)))
-                   (interp p)
+                   (eval p)
                    (list fn p))]))
