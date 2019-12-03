@@ -1,0 +1,3 @@
+#lang racket
+(read-char)
+
