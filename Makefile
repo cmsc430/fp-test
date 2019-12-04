@@ -14,10 +14,10 @@ compile: $(execs)
 compile-io: $(execs-io)
 
 run-io: $(execs-io)
-	@for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | progs-io/$$d.run; done; done
+	@for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | progs-io/$$d.run; done; done > run-io
 
 racket-io: $(execs-io)
-	@for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | racket progs-io/$$d.rkt; done; done
+	@for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | racket progs-io/$$d.rkt; done; done > racket-io
 
 test: run-io
 
