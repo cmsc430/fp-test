@@ -14,12 +14,15 @@ compile: $(execs)
 compile-io: $(execs-io)
 
 run-io: $(execs-io)
-	for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | progs-io/$$d.run; done; done
+	@for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | progs-io/$$d.run; done; done
 
-%.test: %.run
-	@echo "$(shell $<)" = "$(shell racket $*.rkt)"
+racket-io: $(execs-io)
+	@for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | racket progs-io/$$d.rkt; done; done
 
 test:
+	@make run-io > compiled-out.txt
+	@make racket-io > racket-out.txt
+	diff compiled-out.txt racket-out.txt
 
 clean:
 	-rm progs/*run
