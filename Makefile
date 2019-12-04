@@ -20,7 +20,7 @@ racket-io: $(execs-io)
 	@for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | racket progs-io/$$d.rkt; done; done > racket-io
 
 test: compile-io
-	cat input/001/0.txt | progs-io/001.run
+	for d in `ls input`; do for f in input/$$d/*txt; do echo $$f progs-io/$$d.run;  cat $$f | progs-io/$$d.run > /dev/null; done; done
 
 testall:
 	@make run-io > compiled-out.txt
@@ -28,5 +28,7 @@ testall:
 	diff compiled-out.txt racket-out.txt
 
 clean:
+	-rm run-io
+	-rm racket-io
 	-rm progs/*run
 	-rm progs-io/*run
