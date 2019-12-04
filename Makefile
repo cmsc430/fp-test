@@ -19,7 +19,7 @@ run-io: $(execs-io)
 racket-io: $(execs-io)
 	@for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | racket progs-io/$$d.rkt; done; done
 
-test:
+test: run-io
 
 testall:
 	@make run-io > compiled-out.txt
