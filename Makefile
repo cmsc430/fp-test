@@ -20,6 +20,7 @@ racket-io: $(execs-io)
 	@for d in `ls input`; do for f in input/$$d/*txt; do cat $$f | racket progs-io/$$d.rkt; done; done > racket-io
 
 test: compile-io
+	cat input/001/0.txt | progs-io/001.run
 
 testall:
 	@make run-io > compiled-out.txt
